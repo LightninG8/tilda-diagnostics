@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container diagnostics">
+    <div class="page-title">Название теста</div>
+
+    <div class="diagnostics-container">
+      <div class="diagnostics-column diagnostics-modules">
+        <div class="diagnostics-module active">
+          <div class="module-number">01</div>
+          <div class="diagnostics-title">Мышление</div>
+        </div>
+        <div class="diagnostics-module">
+          <div class="module-number">02</div>
+          <div class="diagnostics-title">Бизнес-модель</div>
+        </div>
+        <div class="diagnostics-module">
+          <div class="module-number">03</div>
+          <div class="diagnostics-title">Команда и управление</div>
+        </div>
+      </div>
+      <div class="diagnostics-column diagnostics-questions">
+        <div class="diagnostics-question ">
+          <div class="question-title">Доход «застрял» на одном уровне, последний год цифры не меняется</div>
+          <div class="question-answers">
+            <label class="question-answer">
+              <input type="radio" name="1-1" class="answer-radio">
+              <div class="answer-checkbox"></div>
+              <div class="answer-text">Да</div>
+            </label>
+            <label class="question-answer">
+              <input type="radio" name="1-1" class="answer-radio">
+              <div class="answer-checkbox"></div>
+              <div class="answer-text">Нет</div>
+            </label>
+          </div>
+        </div>
+        <div class="diagnostics-question ">
+          <div class="question-title">Доход «застрял» на одном уровне, последний год цифры не меняется</div>
+          <div class="question-answers">
+            <label class="question-answer">
+              <input type="radio" name="1-2" class="answer-radio">
+              <div class="answer-checkbox"></div>
+              <div class="answer-text">Да</div>
+            </label>
+            <label class="question-answer">
+              <input type="radio" name="1-2" class="answer-radio">
+              <div class="answer-checkbox"></div>
+              <div class="answer-text">Нет</div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container diagnostics">
+    <div class="page-title">
+      <div class="title-text">Ваш результат:</div>
+      <div class="title-subtext">40/60</div>
+    </div>
+    <div class="result-diagram">
+      <canvas id="result-canvas"></canvas>
+    </div>
+    <div class="result-instruments">
+      <div class="instruments-block">
+        <div class="instruments-title">Рекомендованый инструмент:</div>
+        <div class="instruments-list">
+          <div class="instrument">+ ограничивающие установки мышления</div>
+          <div class="instrument">+ ограничивающие установки мышления</div>
+          <div class="instrument">+ ограничивающие установки мышления</div>
+          <div class="instrument">+ ограничивающие установки мышления</div>
+          <div class="instrument">+ ограничивающие установки мышления</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script id="diagnostics" src="./main.js"></script>
+
+</body>
+
+</html>

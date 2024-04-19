@@ -1,0 +1,313 @@
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.diagnostics {
+  padding: 80px 70px 50px 70px;
+  box-sizing: border-box;
+}
+
+.diagnostics * {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.page-title {
+  font-family: "SF Pro Display";
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 58px;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+.diagnostics-container {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-column-gap: 130px;
+}
+
+.diagnostics-column {
+}
+
+.diagnostics-modules {
+}
+
+.diagnostics-module {
+  font-family: SF Pro Display;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: -0.03em;
+  color: #c6c6c6;
+
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 36px 0;
+
+  border-bottom: 3px solid #c6c6c6;
+  transition: 0.2s;
+}
+
+.module-number {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.diagnostics-module:first-child {
+  padding-top: 0;
+}
+
+.diagnostics-module.active {
+  color: #606060;
+}
+
+.diagnostics-question {
+  font-family: SF Pro Display;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+
+  padding: 20px 30px 24px 30px;
+  background: #eaeaea;
+  border-radius: 10px;
+  margin-top: 16px;
+}
+
+.diagnostics-question:first-child {
+  margin-top: 0;
+}
+
+.question-answers {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.question-answer {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  cursor: pointer;
+
+  color: #606060;
+}
+
+.answer-checkbox {
+  width: 22px;
+  height: 22px;
+
+  border: 3px solid #606060;
+  background: none;
+  border-radius: 5px;
+
+  transition: 0.2s;
+}
+
+.answer-text {
+  transition: 0.2s;
+}
+
+.answer-radio {
+  display: none;
+}
+
+.answer-radio:checked ~ .answer-checkbox {
+  border-color: #1226a1;
+  background: #1226a1;
+}
+
+.answer-radio:checked ~ .answer-text {
+  color: #1226a1;
+}
+
+/* Результаты */
+.title-subtext {
+  color: #606060;
+}
+
+.result-diagram {
+  position: relative;
+
+  margin-top: 76px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 810px;
+  height: 640px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 1px solid #1226a1;
+  border-radius: 20px;
+  background: #eaeaea;
+}
+
+.result-instruments {
+  margin-top: 32px;
+  padding: 26px 36px;
+  width: 810px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 1px solid #1226a1;
+  border-radius: 20px;
+}
+.instruments-block {
+  font-family: SF Pro Display;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+}
+
+.instruments-title {
+  color: #606060;
+}
+
+.instruments-list {
+  margin-top: 14px;
+}
+
+.instrument {
+  color: #111111;
+}
+
+#result-canvas {
+  width: 100%;
+}
+
+/* Ноуты */
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 940px;
+  }
+
+  .diagnostics-container {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+}
+
+/* Планшеты */
+@media screen and (max-width: 960px) {
+  .container {
+    max-width: 620px;
+  }
+
+  .diagnostics-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 50px;
+  }
+
+  .result-diagram {
+    width: 100%;
+    height: 400px;
+  }
+
+  .result-instruments {
+    width: 100%;
+  }
+
+  #result-canvas-desktop {
+    display: none;
+  }
+
+  #result-canvas-mobile {
+    display: block;
+  }
+}
+
+/* Лэндскейп смартфон */
+@media screen and (max-width: 640px) {
+  .diagnostics {
+    padding: 70px 0 30px 0;
+  }
+  .container {
+    max-width: 300px;
+  }
+
+  .page-title {
+    text-align: left;
+    font-size: 34px;
+    line-height: 34px;
+  }
+
+  .diagnostics-container {
+    margin-top: 60px;
+    grid-row-gap: 22px;
+  }
+
+  .diagnostics-module {
+    padding: 15px 0;
+    font-size: 14px;
+    line-height: 18px;
+
+    border-bottom-width: 2px;
+  }
+
+  .module-number {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .diagnostics-question {
+    padding: 12px 18px 16px 18px;
+    font-size: 14.25px;
+    line-height: 14.25px;
+  }
+
+  .question-answers {
+    margin-top: 16px;
+  }
+
+  .answer-checkbox {
+    width: 13px;
+    height: 13px;
+    border-width: 2px;
+    border-radius: 2px;
+  }
+
+  .diagnostics-module:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .result-diagram {
+    height: 350px;
+  }
+
+  .result-instruments {
+  }
+
+  .instruments-block {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .instruments-title {
+  }
+
+  .instruments-list {
+    margin-top: 7px;
+  }
+
+  .instrument {
+  }
+}
+
+/* Смартфон */
+@media screen and (max-width: 480px) {
+}
